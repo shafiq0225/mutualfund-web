@@ -1,0 +1,67 @@
+h1 {
+    color: #146ef5;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form {
+    margin: 0 auto;
+    font-family: sans-serif;
+    background: #fff;
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-item {
+    position: relative;
+    margin: 15px
+}
+
+.form-item input {
+    display: block;
+    width: 250px;
+    height: 40px;
+    background: transparent;
+    border: solid 1px #ccc;
+    transition: all .3s ease;
+    padding: 0 15px
+}
+
+.form-item input:focus,
+.form-item input:hover {
+    border-color: #146ef5
+}
+
+.form-item label {
+    position: absolute;
+    cursor: text;
+    top: 13px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #fff;
+    padding: 0 10px;
+    color: #146ef5;
+    transition: all .3s ease
+}
+
+.form-item label {
+    font-size: 11px;
+    top: -5px
+}
+
+.form-item a input {
+    cursor: pointer;
+}
+
+.form-item a:hover + label, 
+.form-item input:hover + label {
+    color: black;
+}
+i.fa.fa-caret-down {
+    margin-top: -27px;
+    margin-left: 213px;
+}
