@@ -1,5 +1,4 @@
-h1 {
-    color: #146ef5;
+h2 {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -30,7 +29,7 @@ h1 {
     padding: 0 15px
 }
 
-.form-item input:focus,
+
 .form-item input:hover {
     border-color: #146ef5
 }
@@ -41,10 +40,8 @@ h1 {
     top: 13px;
     left: 10px;
     font-size: 12px;
-    font-weight: bold;
     background: #fff;
     padding: 0 10px;
-    color: #146ef5;
     transition: all .3s ease
 }
 
@@ -61,7 +58,9 @@ h1 {
 .form-item input:hover + label {
     color: black;
 }
+
 i.fa.fa-caret-down {
-    margin-top: -27px;
-    margin-left: 213px;
+    position: absolute;
+    margin-left: 227px;
+    margin-top : -25px;
 }
