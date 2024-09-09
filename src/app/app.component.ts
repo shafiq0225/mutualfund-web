@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavHistoryComponent } from './nav-history/nav-history.component';
+import { FullComponent } from "./layout/full/full.component";
+import { TablerIconsModule } from 'angular-tabler-icons';
+import * as TablerIcons from 'angular-tabler-icons/icons';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavHistoryComponent],
+  imports: [FullComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'mutualfund-web';
