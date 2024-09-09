@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import { HeaderComponent } from "./header/header.component";
 import { MatSidenav, MatSidenavContent, MatSidenavModule } from '@angular/material/sidenav';
+import { NavHistoryComponent } from "../../pages/nav-history/nav-history.component";
 
 @Component({
   selector: 'app-full',
@@ -9,8 +10,7 @@ import { MatSidenav, MatSidenavContent, MatSidenavModule } from '@angular/materi
   imports: [SidebarComponent, HeaderComponent,
     MatSidenavModule,
     MatSidenavContent,
-    MatSidenav
-  ],
+    MatSidenav, NavHistoryComponent],
   templateUrl: './full.component.html',
   styleUrl: './full.component.scss'
 })

@@ -1,6 +1,11 @@
 <mat-sidenav-container class="mainWrapper blue_theme  light-theme" autosize autoFocus dir="ltr">
-    <mat-sidenav  [opened]="true" [mode]="'side'" class="sidebarNav">
+    <mat-sidenav [opened]="true" [mode]="'side'" class="sidebarNav">
         <app-sidebar></app-sidebar>
     </mat-sidenav>
-    <app-header></app-header>
+    <mat-sidenav-content class="contentWrapper">
+        <app-header></app-header>
+        <main class="pageWrapper">
+           <app-nav-history></app-nav-history>
+          </main>
+    </mat-sidenav-content>
 </mat-sidenav-container>
