@@ -1,0 +1,70 @@
+<div class="card">
+    <h5>Nav History</h5>
+    <p-tabView>
+        <p-tabPanel header="Today">          
+                <div class="grid">
+                    <div class="col-12">
+                        <div class="card">
+                            <p-table [value]="customers3" rowGroupMode="subheader" groupRowsBy="representative.name"
+                                sortField="representative.name" (onSort)="onSort()" sortMode="single" responsiveLayout="scroll"
+                                [scrollable]="true" scrollHeight="400px">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th rowspan="2">S.No</th>
+                                        <th rowspan="2">Scheme Name</th>
+                                        <th colspan="2">08-09-2024</th>
+                                        <th colspan="2">09-09-2024</th>
+                                    </tr>
+                                    <tr height="40">
+                                        <th>Nav Rate</th>
+                                        <th>%</th>
+                                        <th>Nav Rate</th>
+                                        <th>%</th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-customer let-rowIndex="rowIndex">
+                                    <tr pRowGroupHeader *ngIf="rowGroupMetadata[customer.representative.name].index === rowIndex">
+                                        <td colspan="6" style="min-width: 200px;">
+                                            Aditya Birla Sun Life Mutual Fund
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            {{rowIndex}}
+                                        </td>
+                                        <td>    
+                                            <span class="image-text" >Aditya Birla Sun Life Banking & PSU Debt Fund - Regular Plan-Growth</span>
+                                        </td>
+                                        <td >
+                                            343.2789
+                                        </td>
+                                        <td>
+                                            0.01 <i class="pi pi-arrow-down" style="color: red;"></i>
+                                        </td>
+                                        <td>
+                                            344.2789
+                                        </td>
+                                        <td>
+                                            0.02 <i class="pi pi-arrow-up" style="color: green;"></i>
+                                        </td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </div>
+                    </div>
+                </div>
+        </p-tabPanel>
+        <p-tabPanel header="Yesterday">
+            <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+            </p>
+        </p-tabPanel>
+        <p-tabPanel header="Customize">
+            <p>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+                qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+            </p>
+        </p-tabPanel>
+    </p-tabView>
+</div>
