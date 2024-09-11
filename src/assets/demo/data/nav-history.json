@@ -1,0 +1,100 @@
+{
+    "data": [
+        {
+            "id": 1000,
+            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund - Retail Plan-Growth",
+            "previousrate": "515.3078",
+            "previousdate": "10-09-2024",
+            "currentrate": "516.3078",
+            "currentdate": "11-09-2024",
+            "status": "unqualified",
+            "scheme": {
+                "name": "Aditya Birla Sun Life Mutual Fund"
+            }
+        },
+        {
+            "id": 1000,
+            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW",
+            "previousrate": "149.0039",
+            "previousdate": "10-09-2024",
+            "currentrate": "150.0039",
+            "currentdate": "11-09-2024",
+            "status": "unqualified",
+            "scheme": {
+                "name": "Aditya Birla Sun Life Mutual Fund"
+            }
+        },
+        {
+            "id": 1000,
+            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund - Retail Plan-Growth",
+            "previousrate": "515.3078",
+            "previousdate": "10-09-2024",
+            "currentrate": "516.3078",
+            "currentdate": "11-09-2024",
+            "status": "unqualified",
+            "scheme": {
+                "name": "Aditya Birla Sun Life Mutual Fund"
+            }
+        },
+        {
+            "id": 1002,
+            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW",
+            "previousrate": "149.0039",
+            "previousdate": "10-09-2024",
+            "currentrate": "150.0039",
+            "currentdate": "11-09-2024",
+            "status": "unqualified",
+            "scheme": {
+                "name": "Aditya Birla Sun Life Mutual Fund"
+            }
+        },
+        {
+            "id": 1003,
+            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund - Retail Plan-Growth",
+            "previousrate": "515.3078",
+            "previousdate": "10-09-2024",
+            "currentrate": "516.3078",
+            "currentdate": "11-09-2024",
+            "status": "unqualified",
+            "scheme": {
+                "name": "Aditya Birla Sun Life Mutual Fund"
+            }
+        },
+        {
+            "id": 1004,
+            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW",
+            "previousrate": "149.0039",
+            "previousdate": "10-09-2024",
+            "currentrate": "150.0039",
+            "currentdate": "11-09-2024",
+            "status": "unqualified",
+            "scheme": {
+                "name": "Aditya Birla Sun Life Mutual Fund"
+            }
+        },
+        {
+            "id": 1004,
+            "fundname": "Franklin India Corporate Debt Fund - Direct - GROWTH ",
+            "previousrate": "98.29",
+            "previousdate": "10-09-2024",
+            "currentrate": "99.29",
+            "currentdate": "11-09-2024",
+            "status": "unqualified",
+            "scheme": {
+                "name": "Franklin Templeton Mutual Fund "
+            }
+        },
+        {
+            "id": 1004,
+            "fundname": "Franklin India Corporate Debt Fund - Direct - GROWTH ",
+            "previousrate": "98.29",
+            "previousdate": "10-09-2024",
+            "currentrate": "99.29",
+            "currentdate": "11-09-2024",
+            "status": "unqualified",
+            "scheme": {
+                "name": "Franklin Templeton Mutual Fund "
+            }
+        }
+    ]
+}

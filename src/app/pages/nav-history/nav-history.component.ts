@@ -1,26 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerService } from '../services/customer.service';
+import { Fund } from '../Models/fund';
+import { NavHistoryService } from '../services/nav-history.service';
 
-export interface Country {
-  name?: string;
-  code?: string;
-}
-
-export interface Representative {
-  name?: string;
-  image?: string;
-}
-
-export interface Customer {
-  id?: number;
-  name?: string;
-  country?: Country;
-  company?: string;
-  date?: string;
-  status?: string;
-  activity?: number;
-  representative?: Representative;
-}
 
 
 @Component({
@@ -30,40 +11,43 @@ export interface Customer {
 })
 export class NavHistoryComponent implements OnInit {
 
-  constructor(private customerService: CustomerService){}
+  constructor(private customerService: NavHistoryService) { }
   ngOnInit(): void {
     this.customerService.getCustomersLarge().then(customers => this.customers3 = customers);
   }
   rowGroupMetadata: any;
-  customers3: Customer[] = [];
-
+  customers3: Fund[] = [];
+  previousDate: string | undefined;
+  currentDate: string | undefined;
 
   onSort() {
     this.updateRowGroupMetaData();
-}
+  }
 
-updateRowGroupMetaData() {
-  this.rowGroupMetadata = {};
+  updateRowGroupMetaData() {
+    this.rowGroupMetadata = {};
 
-  if (this.customers3) {
+    if (this.customers3) {
       for (let i = 0; i < this.customers3.length; i++) {
-          const rowData = this.customers3[i];
-          const representativeName = rowData?.representative?.name || '';
+        const rowData = this.customers3[i];
+        this.previousDate = rowData.previousdate;
+        this.currentDate = rowData.currentdate;
+        const representativeName = rowData?.scheme?.name || '';
 
-          if (i === 0) {
-              this.rowGroupMetadata[representativeName] = { index: 0, size: 1 };
+        if (i === 0) {
+          this.rowGroupMetadata[representativeName] = { index: 0, size: 1 };
+        }
+        else {
+          const previousRowData = this.customers3[i - 1];
+          const previousRowGroup = previousRowData?.scheme?.name;
+          if (representativeName === previousRowGroup) {
+            this.rowGroupMetadata[representativeName].size++;
           }
           else {
-              const previousRowData = this.customers3[i - 1];
-              const previousRowGroup = previousRowData?.representative?.name;
-              if (representativeName === previousRowGroup) {
-                  this.rowGroupMetadata[representativeName].size++;
-              }
-              else {
-                  this.rowGroupMetadata[representativeName] = { index: i, size: 1 };
-              }
+            this.rowGroupMetadata[representativeName] = { index: i, size: 1 };
           }
+        }
       }
+    }
   }
-}
 }

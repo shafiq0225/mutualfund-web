@@ -16,8 +16,6 @@ import { MenuItemComponent } from './layout/sidebar/menu/menu-item/menu-item.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavHistoryComponent } from './pages/nav-history/nav-history.component';
 import { TableModule } from 'primeng/table';
-import { CustomerService } from './pages/services/customer.service';
-import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { TabViewModule } from 'primeng/tabview';
 

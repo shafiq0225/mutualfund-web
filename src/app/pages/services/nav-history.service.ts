@@ -1,19 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Customer } from '../nav-history/nav-history.component';
+import { Fund } from '../Models/fund';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CustomerService {
+export class NavHistoryService {
 
   constructor(private http: HttpClient) { }
 
 
   getCustomersLarge() {
-    return this.http.get<any>('assets/demo/data/customers-large.json')
+    return this.http.get<any>('assets/demo/data/nav-history.json')
         .toPromise()
-        .then(res => res.data as Customer[])
+        .then(res => res.data as Fund[])
         .then(data => data);
 }
 }
