@@ -5,14 +5,16 @@
             <div class="grid">
                 <div class="col-12">
                     <div class="card">
-                        <p-table #dt1  styleClass="p-datatable-gridlines p-datatable-striped" [value]="customers3" rowGroupMode="subheader" groupRowsBy="representative.name"
-                            sortField="representative.name" (onSort)="onSort()" sortMode="single"
-                            responsiveLayout="scroll" [scrollable]="true" scrollHeight="400px" [globalFilterFields]="['fundname','scheme.name']">
+                        <p-table #dt1 styleClass="p-datatable-gridlines p-datatable-striped" [value]="fund"
+                            rowGroupMode="subheader" groupRowsBy="representative.name" sortField="representative.name"
+                            (onSort)="onSort()" sortMode="single" responsiveLayout="scroll" [scrollable]="true"
+                            scrollHeight="400px" [globalFilterFields]="['fundname','scheme.name']">
                             <ng-template pTemplate="caption">
                                 <div class="flex justify-content-between flex-column sm:flex-row">
                                     <span class="p-input-icon-left mb-2">
                                         <i class="pi pi-search"></i>
-                                        <input pInputText type="text" #filter (input)="onSchemeFilter(dt1, $event)" placeholder="Search Scheme" class="w-full"/>
+                                        <input pInputText type="text" #filter (input)="onSchemeFilter(dt1, $event)"
+                                            placeholder="Search Scheme" class="w-full" />
                                     </span>
                                 </div>
                             </ng-template>
@@ -30,10 +32,10 @@
                                     <th>%</th>
                                 </tr>
                             </ng-template>
-                            <ng-template pTemplate="body" let-customer let-rowIndex="rowIndex">
-                                <tr pRowGroupHeader *ngIf="rowGroupMetadata[customer.scheme.name].index === rowIndex">
+                            <ng-template pTemplate="body" let-fund let-rowIndex="rowIndex">
+                                <tr pRowGroupHeader *ngIf="rowGroupMetadata[fund.scheme.name].index === rowIndex">
                                     <td colspan="6" style="min-width: 200px;">
-                                        <span class="font-bold ml-2">{{customer.scheme.name}}</span>
+                                        <span class="font-bold ml-2">{{fund.scheme.name}}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -41,16 +43,16 @@
                                         {{rowIndex}}
                                     </td>
                                     <td>
-                                        <span class="image-text">{{customer.fundname}}</span>
+                                        <span class="image-text">{{fund.fundname}}</span>
                                     </td>
                                     <td>
-                                        {{customer.previousrate}}
+                                        {{fund.previousrate}}
                                     </td>
                                     <td>
                                         0.01 <i class="pi pi-arrow-down" style="color: red;"></i>
                                     </td>
                                     <td>
-                                        {{customer.currentrate}}
+                                        {{fund.currentrate}}
                                     </td>
                                     <td>
                                         0.02 <i class="pi pi-arrow-up" style="color: green;"></i>

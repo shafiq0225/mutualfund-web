@@ -12,12 +12,13 @@ import { Table } from 'primeng/table';
 })
 export class NavHistoryComponent implements OnInit {
 
-  constructor(private customerService: NavHistoryService) { }
+  constructor(private navHistoryService: NavHistoryService) { }
+  
   ngOnInit(): void {
-    this.customerService.getCustomersLarge().then(customers => this.customers3 = customers);
+    this.navHistoryService.getFundDetails().then(f => this.fund = f);
   }
   rowGroupMetadata: any;
-  customers3: Fund[] = [];
+  fund: Fund[] = [];
   previousDate: string | undefined;
   currentDate: string | undefined;
 
@@ -27,9 +28,9 @@ export class NavHistoryComponent implements OnInit {
 
   updateRowGroupMetaData() {
     this.rowGroupMetadata = {};
-    if (this.customers3) {
-      for (let i = 0; i < this.customers3.length; i++) {
-        const rowData = this.customers3[i];
+    if (this.fund) {
+      for (let i = 0; i < this.fund.length; i++) {
+        const rowData = this.fund[i];
         this.previousDate = rowData.previousdate;
         this.currentDate = rowData.currentdate;
         const representativeName = rowData?.scheme?.name || '';
@@ -38,7 +39,7 @@ export class NavHistoryComponent implements OnInit {
           this.rowGroupMetadata[representativeName] = { index: 0, size: 1 };
         }
         else {
-          const previousRowData = this.customers3[i - 1];
+          const previousRowData = this.fund[i - 1];
           const previousRowGroup = previousRowData?.scheme?.name;
           if (representativeName === previousRowGroup) {
             this.rowGroupMetadata[representativeName].size++;
