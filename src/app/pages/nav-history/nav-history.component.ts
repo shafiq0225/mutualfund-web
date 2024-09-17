@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Fund } from '../Models/fund';
 import { NavHistoryService } from '../services/nav-history.service';
+import { Table } from 'primeng/table';
 
 
 
@@ -26,7 +27,6 @@ export class NavHistoryComponent implements OnInit {
 
   updateRowGroupMetaData() {
     this.rowGroupMetadata = {};
-
     if (this.customers3) {
       for (let i = 0; i < this.customers3.length; i++) {
         const rowData = this.customers3[i];
@@ -49,5 +49,12 @@ export class NavHistoryComponent implements OnInit {
         }
       }
     }
+
   }
+
+
+  onSchemeFilter(table: Table, event: Event) {
+    table.filterGlobal((event.target as HTMLInputElement).value, 'contains');
+}
+
 }

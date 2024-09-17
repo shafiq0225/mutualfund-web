@@ -5,15 +5,23 @@
             <div class="grid">
                 <div class="col-12">
                     <div class="card">
-                        <p-table [value]="customers3" rowGroupMode="subheader" groupRowsBy="representative.name"
+                        <p-table #dt1 [value]="customers3" rowGroupMode="subheader" groupRowsBy="representative.name"
                             sortField="representative.name" (onSort)="onSort()" sortMode="single"
-                            responsiveLayout="scroll" [scrollable]="true" scrollHeight="400px">
+                            responsiveLayout="scroll" [scrollable]="true" scrollHeight="400px" [globalFilterFields]="['fundname','scheme.name']" styleClass="p-datatable-gridlines">
+                            <ng-template pTemplate="caption">
+                                <div class="flex justify-content-between flex-column sm:flex-row">
+                                    <span class="p-input-icon-left mb-2">
+                                        <i class="pi pi-search"></i>
+                                        <input pInputText type="text" #filter (input)="onSchemeFilter(dt1, $event)" placeholder="Search Scheme" class="w-full"/>
+                                    </span>
+                                </div>
+                            </ng-template>
                             <ng-template pTemplate="header">
                                 <tr>
                                     <th rowspan="2">S.No</th>
                                     <th rowspan="2">Scheme Name</th>
-                                    <th colspan="2">{{previousDate}}</th>
-                                    <th colspan="2">{{currentDate}}</th>
+                                    <th colspan="2">10-09-2024 </th>
+                                    <th colspan="2">11-09-2024</th>
                                 </tr>
                                 <tr height="40">
                                     <th>Nav Rate</th>
@@ -23,9 +31,8 @@
                                 </tr>
                             </ng-template>
                             <ng-template pTemplate="body" let-customer let-rowIndex="rowIndex">
-                                <tr pRowGroupHeader
-                                    *ngIf="rowGroupMetadata[customer.scheme.name].index === rowIndex">
-                                    <td colspan="6" style="min-width: 200px;">                    
+                                <tr pRowGroupHeader *ngIf="rowGroupMetadata[customer.scheme.name].index === rowIndex">
+                                    <td colspan="6" style="min-width: 200px;">
                                         <span class="font-bold ml-2">{{customer.scheme.name}}</span>
                                     </td>
                                 </tr>
@@ -48,6 +55,11 @@
                                     <td>
                                         0.02 <i class="pi pi-arrow-up" style="color: green;"></i>
                                     </td>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="emptymessage">
+                                <tr>
+                                    <td colspan="8" class="font-bold ml-2">No Scheme found.</td>
                                 </tr>
                             </ng-template>
                         </p-table>

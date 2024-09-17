@@ -18,6 +18,7 @@ import { NavHistoryComponent } from './pages/nav-history/nav-history.component';
 import { TableModule } from 'primeng/table';
 import { HttpClientModule } from '@angular/common/http';
 import { TabViewModule } from 'primeng/tabview';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 
@@ -31,7 +32,7 @@ import { TabViewModule } from 'primeng/tabview';
     MenuComponent,
     MenuItemComponent,
     NavHistoryComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,7 +40,8 @@ import { TabViewModule } from 'primeng/tabview';
     TableModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    TabViewModule
+    TabViewModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
