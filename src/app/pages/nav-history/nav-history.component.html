@@ -5,9 +5,9 @@
             <div class="grid">
                 <div class="col-12">
                     <div class="card">
-                        <p-table #dt1 [value]="customers3" rowGroupMode="subheader" groupRowsBy="representative.name"
+                        <p-table #dt1  styleClass="p-datatable-gridlines p-datatable-striped" [value]="customers3" rowGroupMode="subheader" groupRowsBy="representative.name"
                             sortField="representative.name" (onSort)="onSort()" sortMode="single"
-                            responsiveLayout="scroll" [scrollable]="true" scrollHeight="400px" [globalFilterFields]="['fundname','scheme.name']" styleClass="p-datatable-gridlines">
+                            responsiveLayout="scroll" [scrollable]="true" scrollHeight="400px" [globalFilterFields]="['fundname','scheme.name']">
                             <ng-template pTemplate="caption">
                                 <div class="flex justify-content-between flex-column sm:flex-row">
                                     <span class="p-input-icon-left mb-2">
