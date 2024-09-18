@@ -11,16 +11,20 @@ import { Table } from 'primeng/table';
   styleUrl: './nav-history.component.scss'
 })
 export class NavHistoryComponent implements OnInit {
-
+  rowGroupMetadata: any;
+  fund: Fund[] = [];
+  dateYesterday: Date = new Date();
+  datePreYesterday: Date = new Date();
+  
   constructor(private navHistoryService: NavHistoryService) { }
   
   ngOnInit(): void {
     this.navHistoryService.getFundDetails().then(f => this.fund = f);
+    this.dateYesterday = new Date(this.dateYesterday.setDate(this.dateYesterday.getDate() - 1));
+    this.datePreYesterday = new Date(this.datePreYesterday.setDate(this.datePreYesterday.getDate() - 2));
+    console.log(this.dateYesterday);
+    
   }
-  rowGroupMetadata: any;
-  fund: Fund[] = [];
-  previousDate: string | undefined;
-  currentDate: string | undefined;
 
   onSort() {
     this.updateRowGroupMetaData();
@@ -31,8 +35,6 @@ export class NavHistoryComponent implements OnInit {
     if (this.fund) {
       for (let i = 0; i < this.fund.length; i++) {
         const rowData = this.fund[i];
-        this.previousDate = rowData.previousdate;
-        this.currentDate = rowData.currentdate;
         const representativeName = rowData?.scheme?.name || '';
 
         if (i === 0) {

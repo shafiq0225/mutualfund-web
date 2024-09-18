@@ -1,5 +1,5 @@
 <div class="card">
-    <h5>Nav History</h5>
+    <h5>Nav History</h5>    
     <p-tabView>
         <p-tabPanel header="Today">
             <div class="grid">
@@ -21,9 +21,9 @@
                             <ng-template pTemplate="header">
                                 <tr>
                                     <th rowspan="2">S.No</th>
-                                    <th rowspan="2">Scheme Name</th>
-                                    <th colspan="2">10-09-2024 </th>
-                                    <th colspan="2">11-09-2024</th>
+                                    <th rowspan="2">Scheme Name</th>                                    
+                                    <th colspan="2">{{datePreYesterday | date: 'dd-MM-YYYY'}}</th>
+                                    <th colspan="2">{{dateYesterday | date: 'dd-MM-YYYY'}}</th>
                                 </tr>
                                 <tr height="40">
                                     <th>Nav Rate</th>
