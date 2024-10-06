@@ -1,14 +1,18 @@
 export interface Fund {
-    id: number
-    fundname: string
-    previousrate: string
-    previousdate: string
-    currentrate: string
-    currentdate: string
-    status: string
-    scheme: Scheme
-  }
-  
-  export interface Scheme {
-    name: string
-  }
+  fundId: number;
+  fundName: string;
+  previousRate: string;
+  currentRate: string;
+  currentPercent: string;
+  previousPercent: string;
+  isPreviousGrowth: boolean;
+  isCurrentGrowth: boolean;
+  scheme: Scheme;
+  ishidden: boolean;
+  isvisible: boolean;
+}
+
+interface Scheme {
+  schemeId: string;
+  name: string;
+}

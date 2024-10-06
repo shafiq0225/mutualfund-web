@@ -21,8 +21,7 @@ export class NavHistoryComponent implements OnInit {
   ngOnInit(): void {
     this.navHistoryService.getFundDetails().then(f => this.fund = f);
     this.dateYesterday = new Date(this.dateYesterday.setDate(this.dateYesterday.getDate() - 1));
-    this.datePreYesterday = new Date(this.datePreYesterday.setDate(this.datePreYesterday.getDate() - 2));
-    console.log(this.dateYesterday);
+    this.datePreYesterday = new Date(this.datePreYesterday.setDate(this.datePreYesterday.getDate() - 2));    
     
   }
 

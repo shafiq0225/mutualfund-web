@@ -12,8 +12,8 @@ export class NavHistoryService {
 
   getFundDetails() {
     return this.http.get<any>('assets/demo/data/nav-history.json')
-        .toPromise()
-        .then(res => res.data as Fund[])
-        .then(data => data);
-}
+      .toPromise()
+      .then(res => res.data as Fund[])
+      .then(data => data);
+  }
 }

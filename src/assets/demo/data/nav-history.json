@@ -1,92 +1,100 @@
 {
     "data": [
         {
-            "id": 1000,
-            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund - Retail Plan-Growth",
-            "previousrate": "515.3078",
-            "previousdate": "10-09-2024",
-            "currentrate": "516.3078",
-            "currentdate": "11-09-2024",
+            "fundId": 1,
+            "fundName": "Aditya Birla Sun Life Banking & PSU Debt Fund- Direct Plan-Growth",
+            "previousRate": "11.12",
+            "currentRate": "12.12",
+            "previousPercent": "0.03",
+            "currentPercent": "0.04",
+            "isPreviousGrowth": true,
+            "isCurrentGrowth":true,
             "scheme": {
+                "schemeId": "Ad1",
                 "name": "Aditya Birla Sun Life Mutual Fund"
-            }
+            },
+            "ishidden": false,
+            "isvisible": true
         },
         {
-            "id": 1000,
-            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW",
-            "previousrate": "149.0039",
-            "previousdate": "10-09-2024",
-            "currentrate": "150.0039",
-            "currentdate": "11-09-2024",
+            "fundId": 2,
+            "fundName": "Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW",
+            "previousRate": "110.12",
+            "currentRate": "120.12",
+            "previousPercent": "0.03",
+            "currentPercent": "0.04",
+            "isPreviousGrowth": true,
+            "isCurrentGrowth":true,
             "scheme": {
+                "schemeId": "Ad1",
                 "name": "Aditya Birla Sun Life Mutual Fund"
-            }
+            },
+            "ishidden": false,
+            "isvisible": true
         },
         {
-            "id": 1000,
-            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund - Retail Plan-Growth",
-            "previousrate": "515.3078",
-            "previousdate": "10-09-2024",
-            "currentrate": "516.3078",
-            "currentdate": "11-09-2024",
+            "fundId": 3,
+            "fundName": "Aditya Birla Sun Life Banking & PSU Debt Fund - Retail Plan-Growth",
+            "previousRate": "1001.12",
+            "currentRate": "1002.12",
+            "previousPercent": "0.02",
+            "currentPercent": "0.04",
+            "isPreviousGrowth": false,
+            "isCurrentGrowth":true,
             "scheme": {
+                "schemeId": "Ad1",
                 "name": "Aditya Birla Sun Life Mutual Fund"
-            }
+            },
+            "ishidden": false,
+            "isvisible": true
         },
         {
-            "id": 1002,
-            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW",
-            "previousrate": "149.0039",
-            "previousdate": "10-09-2024",
-            "currentrate": "150.0039",
-            "currentdate": "11-09-2024",
+            "fundId": 4,
+            "fundName": "Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW;",
+            "previousRate": "499.96",
+            "currentRate": "489.12",
+            "previousPercent": "0.03",
+            "currentPercent": "0.02",
+            "isPreviousGrowth": true,
+            "isCurrentGrowth":false,
             "scheme": {
+                "schemeId": "Ad1",
                 "name": "Aditya Birla Sun Life Mutual Fund"
-            }
+            },
+            "ishidden": false,
+            "isvisible": true
         },
         {
-            "id": 1003,
-            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund - Retail Plan-Growth",
-            "previousrate": "515.3078",
-            "previousdate": "10-09-2024",
-            "currentrate": "516.3078",
-            "currentdate": "11-09-2024",
+            "fundId": 12,
+            "fundName": "Axis Banking & PSU Debt Fund - Direct Plan - Bonus Option",
+            "previousRate": "1532.45",
+            "currentRate": "1533.00",
+            "previousPercent": "0.03",
+            "currentPercent": "0.05",
+            "isPreviousGrowth": true,
+            "isCurrentGrowth":true,
             "scheme": {
-                "name": "Aditya Birla Sun Life Mutual Fund"
-            }
+                "schemeId": "Ax1",
+                "name": "Axis Mutual Fund"
+            },
+            "ishidden": false,
+            "isvisible": true
         },
         {
-            "id": 1004,
-            "fundname": "Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW",
-            "previousrate": "149.0039",
-            "previousdate": "10-09-2024",
-            "currentrate": "150.0039",
-            "currentdate": "11-09-2024",
+            "fundId": 13,
+            "fundName": "Axis Banking & PSU Debt Fund - Direct Plan - Weekly IDCW",
+            "previousRate": "1038.46",
+            "currentRate": "1039.00",
+            "previousPercent": "0.03",
+            "currentPercent": "0.05",
+            "isPreviousGrowth": true,
+            "isCurrentGrowth":true,
             "scheme": {
-                "name": "Aditya Birla Sun Life Mutual Fund"
-            }
-        },
-        {
-            "id": 1004,
-            "fundname": "Franklin India Corporate Debt Fund - Direct - GROWTH ",
-            "previousrate": "98.29",
-            "previousdate": "10-09-2024",
-            "currentrate": "99.29",
-            "currentdate": "11-09-2024",
-            "scheme": {
-                "name": "Franklin Templeton Mutual Fund "
-            }
-        },
-        {
-            "id": 1004,
-            "fundname": "Franklin India Corporate Debt Fund - Direct - GROWTH ",
-            "previousrate": "98.29",
-            "previousdate": "10-09-2024",
-            "currentrate": "99.29",
-            "currentdate": "11-09-2024",
-            "scheme": {
-                "name": "Franklin Templeton Mutual Fund "
-            }
+                "schemeId": "Ax1",
+                "name": "Axis Mutual Fund"
+            },
+            "ishidden": false,
+            "isvisible": true
         }
     ]
 }

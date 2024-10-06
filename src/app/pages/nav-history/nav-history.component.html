@@ -43,19 +43,27 @@
                                         {{rowIndex}}
                                     </td>
                                     <td>
-                                        <span class="image-text">{{fund.fundname}}</span>
+                                        <span class="image-text">{{fund.fundName}}</span>
                                     </td>
                                     <td>
-                                        {{fund.previousrate}}
+                                        {{fund.previousRate}}
                                     </td>
                                     <td>
-                                        0.01 <i class="pi pi-arrow-down" style="color: red;"></i>
+                                        {{fund.previousPercent}} @if (fund.isPreviousGrowth) {
+                                            <i class="pi pi-arrow-up" style="color: green;"></i>
+                                        } @else {
+                                            <i class="pi pi-arrow-down" style="color: red;"></i>
+                                        }                                         
                                     </td>
                                     <td>
-                                        {{fund.currentrate}}
+                                        {{fund.currentRate}}
                                     </td>
                                     <td>
-                                        0.02 <i class="pi pi-arrow-up" style="color: green;"></i>
+                                        {{fund.currentPercent}} @if (fund.isCurrentGrowth) {
+                                            <i class="pi pi-arrow-up" style="color: green;"></i>
+                                        } @else {
+                                            <i class="pi pi-arrow-down" style="color: red;"></i>
+                                        }   
                                     </td>
                                 </tr>
                             </ng-template>
